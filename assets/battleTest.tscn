@@ -1,0 +1,27 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://Resources/Tilesets/grassy_map.tres" type="TileSet" id=1]
+[ext_resource path="res://assets/Z0.gd" type="Script" id=2]
+[ext_resource path="res://assets/pawns/pawn.png" type="Texture" id=4]
+
+[node name="Node2D" type="Node2D"]
+position = Vector2( 512, 192 )
+
+[node name="Z0" type="TileMap" parent="."]
+mode = 1
+tile_set = ExtResource( 1 )
+cell_size = Vector2( 64, 32 )
+cell_tile_origin = 2
+centered_textures = true
+format = 1
+tile_data = PoolIntArray( 0, 1, 0, 1, 1, 0, 2, 1, 0, 3, 1, 0, 4, 1, 0, 5, 1, 0, 6, 1, 0, 65536, 1, 0, 65537, 0, 0, 65538, 1, 0, 65539, 1, 0, 65540, 0, 0, 65541, 1, 0, 65542, 0, 0, 131072, 1, 0, 131073, 1, 0, 131074, 1, 0, 131075, 1, 0, 131076, 1, 0, 131077, 1, 0, 131078, 0, 0, 196608, 0, 0, 196609, 1, 0, 196610, 0, 0, 196611, 1, 0, 196612, 0, 0, 196613, 2, 0, 196614, 2, 0, 262144, 1, 0, 262145, 0, 0, 262146, 1, 0, 262147, 1, 0, 262148, 1, 0, 262149, 2, 0, 262150, 1, 0, 327680, 1, 0, 327681, 1, 0, 327682, 1, 0, 327683, 1, 0, 327684, 2, 0, 327685, 2, 0, 327686, 0, 0, 393216, 1, 0, 393217, 1, 0, 393218, 0, 0, 393219, 1, 0, 393220, 2, 0, 393221, 1, 0, 393222, 1, 0 )
+script = ExtResource( 2 )
+
+[node name="Pawn" type="Sprite" parent="Z0"]
+texture = ExtResource( 4 )
+offset = Vector2( 0, 16 )
+
+[node name="show_pos" type="RichTextLabel" parent="Z0"]
+margin_left = 128.0
+margin_right = 168.0
+margin_bottom = 40.0
